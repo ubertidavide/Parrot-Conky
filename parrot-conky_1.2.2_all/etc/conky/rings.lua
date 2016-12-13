@@ -69,8 +69,13 @@ v1.0 (08 Aug. 2010) original release
 
 
 require 'cairo'
+
 function conky_main_rings()
 -- START PARAMETERS HERE
+
+-- Set here cpu numbers, min 0, max 4
+cpu_numbers = 4
+
 rings_settings={
 	{
 	name="hwmon",
@@ -90,7 +95,7 @@ rings_settings={
 	},
 	{
 	name="battery_percent",
-	arg="BAT0",
+	arg="AC",
 	max=100,
 	xc=175.5,
 	yc=141,
@@ -103,134 +108,6 @@ rings_settings={
 	bg_colour1={{0.5,0xFF0000,0.2}},
 	fg_colour1={{0.5,0xFF0000,0.6}},
 	fg_colour2={{0.5,0xFF0000,0.6}},
-	},
-	{
-	name="cpu",
-	arg="cpu1",
-	max=100,
-	xc=40.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=22,
-	sectors=30,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0xFFE900,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-		{
-	name="cpu",
-	arg="cpu2",
-	max=100,
-	xc=40.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=14,
-	sectors=15,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0x83FF00,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-	{
-	name="cpu",
-	arg="cpu3",
-	max=100,
-	xc=97.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=22,
-	sectors=30,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0x00FF27,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-		{
-	name="cpu",
-	arg="cpu4",
-	max=100,
-	xc=97.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=14,
-	sectors=15,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0x00FF72,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-	{
-	name="cpu",
-	arg="cpu1",
-	max=100,
-	xc=153.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=22,
-	sectors=30,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0x80d9FF,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-		{
-	name="cpu",
-	arg="cpu2",
-	max=100,
-	xc=153.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=14,
-	sectors=15,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0x00F3FF,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-	{
-	name="cpu",
-	arg="cpu3",
-	max=100,
-	xc=210.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=22,
-	sectors=30,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0x9D60FF,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
-	},
-		{
-	name="cpu",
-	arg="cpu4",
-	max=100,
-	xc=210.5,
-	yc=231.5,
-	start_angle=180,
-	end_angle=-180,
-	thickness=5,
-	radius=14,
-	sectors=15,
-	gap_sectors=1,
-	bg_colour1={{0.5,0xFF0000,0.2}},
-	fg_colour1={{0.5,0xB800FF,0.8}},
-	fg_colour2={{0.5,0xFF0000,1}},
 	},
 	{
 	name="memperc",
@@ -472,6 +349,134 @@ rings_settings={
 	fg_colour1={{0.5,0x007DFF,0.6}},
 	fg_colour2={{0.5,0xFF0000,0.6}},
 	},
+	{
+	name="cpu",
+	arg="cpu0",
+	max=100,
+	xc=40.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=22,
+	sectors=30,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0xFFE900,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+		{
+	name="cpu",
+	arg="cpu1",
+	max=100,
+	xc=40.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=14,
+	sectors=15,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0x83FF00,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+	{
+	name="cpu",
+	arg="cpu2",
+	max=100,
+	xc=97.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=22,
+	sectors=30,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0x00FF27,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+		{
+	name="cpu",
+	arg="cpu3",
+	max=100,
+	xc=97.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=14,
+	sectors=15,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0x00FF72,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+	{
+	name="cpu",
+	arg="cpu0",
+	max=100,
+	xc=153.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=22,
+	sectors=30,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0x80d9FF,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+		{
+	name="cpu",
+	arg="cpu1",
+	max=100,
+	xc=153.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=14,
+	sectors=15,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0x00F3FF,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+	{
+	name="cpu",
+	arg="cpu2",
+	max=100,
+	xc=210.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=22,
+	sectors=30,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0x9D60FF,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
+		{
+	name="cpu",
+	arg="cpu3",
+	max=100,
+	xc=210.5,
+	yc=231.5,
+	start_angle=180,
+	end_angle=-180,
+	thickness=5,
+	radius=14,
+	sectors=15,
+	gap_sectors=1,
+	bg_colour1={{0.5,0xFF0000,0.2}},
+	fg_colour1={{0.5,0xB800FF,0.8}},
+	fg_colour2={{0.5,0xFF0000,1}},
+	},
 }
 --END OF PARAMETERS HERE
 
@@ -486,7 +491,27 @@ rings_settings={
 
 	if tonumber(conky_parse('${updates}'))>3 then
 		for i in pairs(rings_settings) do
-			draw_ring(rings_settings[i])
+			
+			--check cpu numbers
+			if rings_settings[i].name=="cpu" then
+				local string_cpu_temp = string.gsub(rings_settings[i].arg, "cpu", "")
+				string_cpu_temp = string.gsub(string_cpu_temp, "temp ", "")
+				local cpu_temp = tonumber(string_cpu_temp)
+
+				if cpu_temp == nil then
+					print("Problem with cpu numbers in ring_settings");
+					return 
+				end
+
+				if cpu_temp > cpu_numbers-1 or cpu_numbers < 0 or cpu_temp < 0 then
+					return 
+				else
+					draw_ring(rings_settings[i])
+				end
+			else
+				draw_ring(rings_settings[i])
+			end
+			--checked 
 		end
 	end
 
