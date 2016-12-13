@@ -2,7 +2,7 @@
 
 
 # Conky Documentation
-https://github.com/brndnmtthws/conky
+[Conky GitHub](https://github.com/brndnmtthws/conky)
 
 # Conky Cpu Numbers
 By default cpu numbers is four, for change it go to /etc/conky/rings.lua and change only the variable cpu_numbers.
