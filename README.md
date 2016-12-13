@@ -1,13 +1,15 @@
-# parrot-conky
+# Parrot Conky
 
 
-# Conky Documentation
-[Conky GitHub](https://github.com/brndnmtthws/conky)
+## Documentation
+[Conky GitHub Page](https://github.com/brndnmtthws/conky)
+[Configure](https://github.com/brndnmtthws/conky/wiki/Configuration-Settings)
+[User Configs](https://github.com/brndnmtthws/conky/wiki/User-Configs)
 
-# Conky Cpu Numbers
+## Set Cpu Numbers
 By default cpu numbers is four, for change it go to /etc/conky/rings.lua and change only the variable cpu_numbers.
 
-# How to install conky
+## Install
 
 ```
 sudo cp ./etc/conky/conky.conf /etc/conky/conky.conf
