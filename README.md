@@ -23,5 +23,4 @@ Start conky
 sudo conky
 ```
 ## Updated
-It work with the latest Parrot Os Version.
-It's easy and fast to change cpu number.
+It work with the latest Parrot Os Version and it's easy and fast to change cpu numbers.
