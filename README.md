@@ -1,5 +1,5 @@
 # Parrot Conky
-Conky is a system monitor for Parrot Security Os, this is a fork of the official parrot-conky created by Lorenzo "Palinuro" Faletra.
+Conky is a system monitor for Parrot Security Os, this is a fork of the official parrot-conky created by Lorenzo "Palinuro" Faletra, fixed for the latest Parrot Os Version(3.2).
 
 ## Documentation
 * [Conky GitHub Page](https://github.com/brndnmtthws/conky)
