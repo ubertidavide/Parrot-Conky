@@ -6,7 +6,7 @@ Conky is a system monitor for Parrot Security Os, this is a fork of the official
 * [Configure](https://github.com/brndnmtthws/conky/wiki/Configuration-Settings)
 * [User Configs](https://github.com/brndnmtthws/conky/wiki/User-Configs)
 
-## Set Cpu Numbers
+## Set Cpu Number
 By default cpu number is four, for change it go to `/etc/conky/rings.lua` and change only the variable `cpu_number = 4`.
 
 ## Install
