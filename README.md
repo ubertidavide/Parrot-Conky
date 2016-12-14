@@ -10,7 +10,7 @@ Conky is a system monitor for Parrot Security Os, this is a fork of the official
 By default cpu number is four, for change it go to `/etc/conky/rings.lua` and change only the variable `cpu_number = 4`.
 
 ## Install
-Copy all the file from the folder
+###Copy all the file from the folder
 ```
 sudo cp ./etc/conky/conky.conf /etc/conky/conky.conf
 sudo cp ./etc/conky/parrot.png /etc/conky/parrot.png
@@ -18,11 +18,16 @@ sudo cp ./etc/conky/rings.lua /etc/conky/rings.lua
 sudo cp ./usr/share/applications/conky-start.desktop /usr/share/applications/conky-start.desktop
 sudo cp ./usr/share/truetype/future/future.ttf /usr/share/truetype/future/future.ttf
 ```
-Start conky
+###Start conky
 ```
 conky
 ```
-Conky Autostart
+###Conky Autostart
+If you want to use a different user instead of root change the destination path with the correct user name.
+```
+sudo cp ./root/.config/autostart/conky-start.desktop /root/.config/autostart/conky-start.desktop
+```
+
 ## Changelog
 * [13/12/2016] It work with the latest version of Parrot(3.2).
 * [13/12/2016] Simplified the setting of the processors number.
