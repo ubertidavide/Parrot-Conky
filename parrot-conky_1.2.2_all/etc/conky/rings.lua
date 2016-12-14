@@ -73,7 +73,7 @@ require 'cairo'
 function conky_main_rings()
 -- START PARAMETERS HERE
 
--- Set here cpu numbers, min 0, max 4
+-- Set here cpu number, min 0, max 4
 cpu_number = 4
 
 rings_settings={
