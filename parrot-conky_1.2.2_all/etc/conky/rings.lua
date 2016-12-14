@@ -74,7 +74,7 @@ function conky_main_rings()
 -- START PARAMETERS HERE
 
 -- Set here cpu numbers, min 0, max 4
-cpu_numbers = 4
+cpu_number = 4
 
 rings_settings={
 	{
@@ -503,7 +503,7 @@ rings_settings={
 					return 
 				end
 
-				if cpu_temp > cpu_numbers-1 or cpu_numbers < 0 or cpu_temp < 0 then
+				if cpu_temp > cpu_number-1 or cpu_number < 0 or cpu_temp < 0 then
 					return 
 				else
 					draw_ring(rings_settings[i])
