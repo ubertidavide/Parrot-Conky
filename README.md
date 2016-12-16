@@ -33,4 +33,4 @@ sudo cp ./root/.config/autostart/conky-start.desktop /root/.config/autostart/con
 * [14/12/2016] Fixed the problem with the distro info.
 
 ##Contacts
---> dave@daveapp.it
+ dave@daveapp.it
