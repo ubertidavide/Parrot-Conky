@@ -32,5 +32,4 @@ sudo cp ./root/.config/autostart/conky-start.desktop /root/.config/autostart/con
 * [13/12/2016] Simplified the setting of the processors number.
 * [14/12/2016] Fixed the problem with the distro info.
 
-##Contacts
- dave@daveapp.it
+
